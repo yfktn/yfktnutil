@@ -1,0 +1,6 @@
+plugin:
+    name: 'yfktn.yfktnutil::lang.plugin.name'
+    description: 'yfktn.yfktnutil::lang.plugin.description'
+    author: 'Yan Friskantoni'
+    icon: oc-icon-laptop
+    homepage: ''

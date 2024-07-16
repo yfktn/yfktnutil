@@ -1,0 +1,17 @@
+<input 
+    type="hidden" 
+    name="g-recaptcha-response" 
+    class="g-recaptcha-response" 
+    value="" 
+/>
+
+{% put scripts %}
+<script lang="text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    grecaptcha.ready(function() {
+        window.YfktnUtilReCaptcha.setTargetHtmlClass('g-recaptcha-response');
+        window.YfktnUtilReCaptcha.initRecaptcha('{{ recaptchaSiteKey }}', 'perlindungan');
+    });
+});
+</script>
+{% endput %}
