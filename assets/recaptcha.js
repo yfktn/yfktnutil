@@ -40,19 +40,29 @@
                     YfktnUtilReCaptcha._setRecaptchaToken(theAction);
                     // console.log('ReCaptcha Token Must Not Expired!');
                 }, 120000); // 2 minutes = 120.000 ms expired                
+            } else {
+                console.error('ReCaptcha Token is not Initialized!');
             }
         },
-        initRecaptcha: function(key = '', theAction='submit') {
+        initRecaptcha: function(key = '', theAction='submit', initAndRun = true) {
             if(!YfktnUtilReCaptcha._initialized) {
                 if(key.length > 0) {
                     YfktnUtilReCaptcha.setSiteKey(key);
                 }
                 YfktnUtilReCaptcha._initialized = true;
                 YfktnUtilReCaptcha._setRecaptchaToken(theAction);
-                YfktnUtilReCaptcha._recaptchaTokenMustNotExpired(theAction);
+                if(initAndRun) {
+                    YfktnUtilReCaptcha._recaptchaTokenMustNotExpired(theAction);
+                }
             } else {
                 console.error('ReCaptcha Already Initialized!');
             }
+        },
+        ensureTokenIsValid(theAction='submit') {
+            if(!YfktnUtilReCaptcha.isInitialized()) {
+                YfktnUtilReCaptcha.initRecaptcha('', theAction, false);
+            } 
+            YfktnUtilReCaptcha._recaptchaTokenMustNotExpired();
         },
         isInitialized: function() {
             return YfktnUtilReCaptcha._initialized;
