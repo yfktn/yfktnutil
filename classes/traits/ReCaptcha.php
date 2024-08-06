@@ -1,8 +1,6 @@
-<?php namespace Yfktn\YfktnUtil\Classes;
-/**
- * @deprecated use Yfktn\Yfktnutil\Classes\Traits\ReCaptcha instead!
- */
-trait TraitReCaptcha
+<?php namespace Yfktn\YfktnUtil\Classes\Traits;
+
+trait ReCaptcha
 {
 
     protected function loadAssetsReCaptcha()

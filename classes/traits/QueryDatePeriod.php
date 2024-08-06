@@ -1,8 +1,6 @@
-<?php namespace Yfktn\Yfktnutil\Classes;
-/**
- * @deprecated use Yfktn\Yfktnutil\Classes\Traits\QueryDatePeriod instead!
- */
-trait TraitQueryPeriod
+<?php namespace Yfktn\Yfktnutil\Classes\Traits;
+
+trait QueryDatePeriod
 {
 
     protected function applyPeriodFilter(&$query, $periodField, $startDate, $endDate)
