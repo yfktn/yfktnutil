@@ -4,3 +4,21 @@ plugin:
     author: 'Yan Friskantoni'
     icon: oc-icon-laptop
     homepage: ''
+permissions:
+    yfktn_util.event_logger.operator:
+        tab: 'Event Logger'
+        label: 'Hak Akses Event Logger'
+navigation:
+    main-menu-util:
+        label: Util
+        url: /
+        icon: icon-certificate
+        permissions:
+            - yfktn_util.event_logger.operator
+        sideMenu:
+            submenu-eventlogger:
+                label: 'Event Logger'
+                url: yfktn/yfktnutil/eventlogger
+                icon: icon-try
+                permissions:
+                    - yfktn_util.event_logger.operator

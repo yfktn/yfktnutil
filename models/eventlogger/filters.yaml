@@ -1,0 +1,7 @@
+scopes:
+  created_at:
+        label: Triggered
+        type: date
+        conditions:
+            after: created_at >= ':value'
+            between: created_at >= ':after' AND created_at <= ':before'

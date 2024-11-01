@@ -1,0 +1,35 @@
+columns:
+    # id:
+    #     label: id
+    #     type: number
+    created_at:
+        label: Triggered At
+        type: datetime
+        invisible: false
+        sortable: true
+        format: 'd-m-Y H:i:s'
+    trigger_type:
+        label: Triggered By
+        type: text
+        searchable: true
+    trigger_id:
+        label: Trigger Obj ID
+        type: number
+    why:
+        label: Why
+        type: text
+        searchable: true
+    updated_at:
+        label: updated_at
+        type: datetime
+        invisible: true
+        sortable: true
+        format: 'd-m-Y H:i:s'
+    description:
+        label: Description
+        type: text
+        searchable: true
+    operator_id:
+        label: operator_id
+        type: number
+        invisible: true
