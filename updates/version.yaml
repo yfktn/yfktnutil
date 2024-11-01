@@ -1,8 +1,8 @@
 v1.0.1:
     - 'Initialize plugin.'
 v1.0.2:
-    - 'Created table yfktn_yfktnutil_revision'
-    - builder_table_create_yfktn_yfktnutil_revision.php
-v.1.0.3:
     - 'Created table yfktn_yfktnutil_event'
     - builder_table_create_yfktn_yfktnutil_event.php
+v.1.0.3:
+    - 'Created table yfktn_yfktnutil_revision'
+    - builder_table_create_yfktn_yfktnutil_revision.php
